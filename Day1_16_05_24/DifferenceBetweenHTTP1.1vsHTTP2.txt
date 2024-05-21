@@ -1,0 +1,21 @@
+The key differences between HTTP 1.1 and HTTP/2:
+
+Multiplexing: 
+    HTTP/2 allows multiple requests and responses to be sent over a single connection, while HTTP 1.1 only allows one request and response to be sent at a time. This reduces the overhead of establishing new connections and improves the performance of the protocol.
+
+Binary protocol: 
+    HTTP/2 uses a binary protocol instead of the text-based protocol used in HTTP 1.1. This reduces the size of the data transmitted between the client and server, improving the efficiency of the protocol.
+
+Header compression: 
+    HTTP/2 uses header compression to reduce the size of header data, which can be significant in HTTP 1.1. This also helps to improve the efficiency of the protocol and reduce latency.
+
+Server push: 
+    HTTP/2 allows the server to send multiple responses to a single request, which can improve the speed and efficiency of web applications.
+
+Prioritization: 
+    HTTP/2 allows the client to specify the priority of requests, which can improve the responsiveness of the protocol and reduce latency. In HTTP 1.1, all requests are treated equally.
+
+TLS encryption: 
+    While HTTPS is optional in HTTP 1.1, it is mandatory in HTTP/2.
+
+    Overall, HTTP/2 offers significant performance improvements over HTTP 1.1, particularly for complex web applications that require multiple requests and responses. However, not all web servers and browsers support HTTP/2, and some older applications may not be compatible with the new protocol.

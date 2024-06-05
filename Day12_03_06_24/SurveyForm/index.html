@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey-Form</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container mt-5">
+            <h1 class="text-center"><strong>Survey-Form</strong></h1>
+            <hr>
+
+            <h5>Name<span style="color: red;">*</span></h5>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="ex. john">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="ex. joe">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email<span style="color: red;">*</span></label>
+                <input type="email" class="form-control col-md-6" id="email" placeholder="abc@email.com" >
+            </div>
+
+            <!-- Experience Ratings -->
+            <h5><strong>Your Experience with Us<span style="color: red;">*</span></strong></h5>
+
+
+            <div class="star-container">
+                <span class="star" onclick="rateStar(1)">★</span>
+                <span class="star" onclick="rateStar(2)">★</span>
+                <span class="star" onclick="rateStar(3)">★</span>
+                <span class="star" onclick="rateStar(4)">★</span>
+                <span class="star" onclick="rateStar(5)">★</span>
+            </div>
+
+            <p>Overall, how would you like your experience with us?</p>
+            <h5><strong>How Satisfied Are You<span style="color: red;">*</span></strong></h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Very Unsatisfied</th>
+                            <th>Unsatisfied</th>
+                            <th>Neutral</th>
+                            <th>Satisfied</th>
+                            <th>Very Satisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="text-left">Purchase</td>
+                            <td><input type="radio" name="satisfactionPurchase" value="veryUnsatisfied"></td>
+                            <td><input type="radio" name="satisfactionPurchase" value="unsatisfied"></td>
+                            <td><input type="radio" name="satisfactionPurchase" value="neutral"></td>
+                            <td><input type="radio" name="satisfactionPurchase" value="satisfied"></td>
+                            <td><input type="radio" name="satisfactionPurchase" value="verySatisfied"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Service</td>
+                            <td><input type="radio" name="satisfactionService" value="veryUnsatisfied"></td>
+                            <td><input type="radio" name="satisfactionService" value="unsatisfied"></td>
+                            <td><input type="radio" name="satisfactionService" value="neutral"></td>
+                            <td><input type="radio" name="satisfactionService" value="satisfied"></td>
+                            <td><input type="radio" name="satisfactionService" value="verySatisfied"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Company Overall</td>
+                            <td><input type="radio" name="satisfactionCompany" value="veryUnsatisfied"></td>
+                            <td><input type="radio" name="satisfactionCompany" value="unsatisfied"></td>
+                            <td><input type="radio" name="satisfactionCompany" value="neutral"></td>
+                            <td><input type="radio" name="satisfactionCompany" value="satisfied"></td>
+                            <td><input type="radio" name="satisfactionCompany" value="verySatisfied"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h5><strong>How Likely Are You To<span style="color: red;">*</span></strong></h5>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Very Unlikely</th>
+                            <th>Unlikely</th>
+                            <th>Neutral</th>
+                            <th>Likely</th>
+                            <th>Very Likely</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="text-left">Buy from Us Again</td>
+                            <td><input type="radio" name="likelihoodBuy" value="veryUnlikely"></td>
+                            <td><input type="radio" name="likelihoodBuy" value="unlikely"></td>
+                            <td><input type="radio" name="likelihoodBuy" value="neutral"></td>
+                            <td><input type="radio" name="likelihoodBuy" value="likely"></td>
+                            <td><input type="radio" name="likelihoodBuy" value="veryLikely"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Recommend Our Product to Others</td>
+                            <td><input type="radio" name="likelihoodRecommendProduct" value="veryUnlikely"></td>
+                            <td><input type="radio" name="likelihoodRecommendProduct" value="unlikely"></td>
+                            <td><input type="radio" name="likelihoodRecommendProduct" value="neutral"></td>
+                            <td><input type="radio" name="likelihoodRecommendProduct" value="likely"></td>
+                            <td><input type="radio" name="likelihoodRecommendProduct" value="veryLikely"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Recommend Our Company to Others</td>
+                            <td><input type="radio" name="likelihoodRecommendCompany" value="veryUnlikely"></td>
+                            <td><input type="radio" name="likelihoodRecommendCompany" value="unlikely"></td>
+                            <td><input type="radio" name="likelihoodRecommendCompany" value="neutral"></td>
+                            <td><input type="radio" name="likelihoodRecommendCompany" value="likely"></td>
+                            <td><input type="radio" name="likelihoodRecommendCompany" value="veryLikely"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="form-group">
+                <label for="comments"><strong>Additional Comments and Suggestions</strong></label>
+                <textarea class="form-control" id="comments" rows="3"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary my-3 px-5 py-2">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentRating = 0;
+
+        function rateStar(star) {
+            currentRating = star;
+            highlightStars(star);
+        }
+
+        function highlightStars(star) {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((s, index) => {
+                if (index < star) {
+                    s.classList.add('checked');
+                } else {
+                    s.classList.remove('checked');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
